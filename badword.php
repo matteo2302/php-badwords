@@ -1,7 +1,7 @@
 <?php 
 $phrase = $_GET['phrase'];
 $bad = $_GET['bad'];
-// $result = 
+$result_censored = str_replace($bad,'***',$phrase)
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +11,7 @@ $bad = $_GET['bad'];
   <title>Document</title>
 </head>
 <body>
-  <h1>la tua frase è "<?= $phrase ?>"</h1>
-  <h1>la tua badword è "<?= $bad ?>"</h1>
+  <h1>la tua frase è "<?= $phrase ?>" ed è lunga <?= strlen($phrase)?> caratteri</h1>
+  <h1>la tua frase censurata è "<?= $result_censored ?>" ed è lunga <?= strlen($result_censored)?> caratteri</h1>
 </body>
 </html>
